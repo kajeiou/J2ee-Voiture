@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-
 public class Date {
     String dateDebut;
     String dateFin;

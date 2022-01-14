@@ -6,21 +6,21 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Location {
     private int idLocation;
-    private Date dateDebut;
-    private Date dateFin;
+    private String dateDebut;
+    private String dateFin;
     private Vehicule vehiculeLouee;
     private Personne conducteur;
 
 
     public Location(int idLocation, String dateDebut, String dateFin) {
         this.idLocation = idLocation;
-
-          
-        this.dateDebut = this.convertirDate(dateDebut);
-        this.dateFin = this.convertirDate(dateFin);
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
 
     }
     public Date convertirDate(String date) {
@@ -57,22 +57,24 @@ public class Location {
         this.idLocation = idLocation;
     }
 
-    public Date getDateDebut() {
+    public String getDateDebut() {
         return dateDebut;
     }
 
     public void setDateDebut(String dateDebut) {
-        this.dateDebut = convertirDate(dateDebut);
+        this.dateDebut = dateDebut;
     }
 
-    public Date getDateFin() {
+    public String getDateFin() {
         return dateFin;
     }
 
     public void setDateFin(String dateFin) {
-        this.dateFin = convertirDate(dateFin);
+        this.dateFin = dateFin;
     }
+    
     @ManyToOne(cascade=CascadeType.ALL)
+    @JsonIgnore
     public Vehicule getVehiculeLouee() {
         return vehiculeLouee;
     }
@@ -80,7 +82,9 @@ public class Location {
     public void setVehiculeLouee(Vehicule vehiculeLouee) {
         this.vehiculeLouee = vehiculeLouee;
     }
+    
     @ManyToOne(cascade=CascadeType.ALL)
+    @JsonIgnore
     public Personne getConducteur() {
         return conducteur;
     }

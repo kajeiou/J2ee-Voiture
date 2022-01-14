@@ -11,6 +11,11 @@ public class Voiture extends Vehicule{
         nombreDeSieges = nbSieges;
     }
 
+    public Voiture() {
+        super();
+        this.nombreDeSieges =0;
+    }
+
     public int getNombreDeSieges() {
         return nombreDeSieges;
     }

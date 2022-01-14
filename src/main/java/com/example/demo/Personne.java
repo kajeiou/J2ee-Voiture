@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Collection;
 
 @Entity
@@ -11,7 +14,7 @@ public class Personne {
     private Vehicule vehiculePrincipal;
     private Collection<Location> locations;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="conducteur")
+    @OneToMany(mappedBy="conducteur")
     public Collection<Location> getLocations() {
         return locations;
     }
@@ -49,7 +52,8 @@ public class Personne {
     public String getNom() {
         return nom;
     }
-@OneToOne(cascade=CascadeType.ALL)
+@OneToOne
+@JsonIgnore
     public Vehicule getVehicule() {
         return vehiculePrincipal;
     }

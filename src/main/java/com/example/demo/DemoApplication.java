@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.example.demo.Repository.LocationRepository;
+
 @SpringBootApplication
 public class DemoApplication {
 

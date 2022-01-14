@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Collection;
 
 @Entity
@@ -61,7 +64,7 @@ public class Vehicule {
 	public void setPrix(float prix) {
 		this.prix = prix;
 	}
-
+	@JsonIgnore
 	public boolean getLocation() {
 		return this.louable;
 	}

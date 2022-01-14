@@ -10,7 +10,10 @@ public class Van extends Vehicule {
         super(plaque, marque, prix);
         poidsMax = poids;
     }
-
+    public Van() {
+        super();
+        this.poidsMax =0;
+    }
     public float getPoidsMax() {
         return poidsMax;
     }

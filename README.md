@@ -1,1 +1,1 @@
-# Premier projet J2E
+# Licence Pro Premier projet J2E

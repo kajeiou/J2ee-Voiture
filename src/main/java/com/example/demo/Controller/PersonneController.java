@@ -1,6 +1,6 @@
 package com.example.demo.Controller;
 
-import com.example.demo.Personne;
+import com.example.demo.Entity.Personne;
 import com.example.demo.Repository.PersonneRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;

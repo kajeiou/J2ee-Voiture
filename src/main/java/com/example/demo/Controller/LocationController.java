@@ -2,7 +2,7 @@ package com.example.demo.Controller;
 
 import java.util.Optional;
 
-import com.example.demo.Location;
+import com.example.demo.Entity.Location;
 import com.example.demo.Repository.LocationRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,7 +2,7 @@ package com.example.demo.Controller;
 
 import java.util.Optional;
 
-import com.example.demo.Vehicule;
+import com.example.demo.Entity.Vehicule;
 import com.example.demo.Repository.VehiculeRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

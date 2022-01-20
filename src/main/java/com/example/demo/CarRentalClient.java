@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.util.List;
 
+import com.example.demo.Entity.Vehicule;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;

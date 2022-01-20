@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.example.demo.Entity.Location;
+import com.example.demo.Entity.Personne;
+import com.example.demo.Entity.Van;
 import com.example.demo.Repository.LocationRepository;
 
 @SpringBootApplication

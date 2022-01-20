@@ -2,6 +2,8 @@ package com.example.demo;
 
 import javax.persistence.Entity;
 
+import com.example.demo.Entity.Vehicule;
+
 @Entity
 public class Voiture extends Vehicule{
     private int nombreDeSieges;

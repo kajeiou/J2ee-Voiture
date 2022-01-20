@@ -41,7 +41,7 @@ public class CarRentalService {
 	@PutMapping("/cars/{plateNumber}")
 
 	public void rent(@PathVariable(value = "plateNumber") String plateNumber, @RequestParam(value="rent") boolean rent, @RequestBody Date date){
-		System.out.println(date);
+		//System.out.println(date);
 
 		Vehicule car = this.getCar(plateNumber);
 		if(car!=null) {

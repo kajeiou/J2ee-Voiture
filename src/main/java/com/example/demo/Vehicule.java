@@ -64,7 +64,6 @@ public class Vehicule {
 	public void setPrix(float prix) {
 		this.prix = prix;
 	}
-	@JsonIgnore
 	public boolean getLocation() {
 		return this.louable;
 	}

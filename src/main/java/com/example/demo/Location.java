@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Location {
+    private static int nbrLocation=0;
     private int idLocation;
     private String dateDebut;
     private String dateFin;
@@ -21,7 +22,16 @@ public class Location {
         this.idLocation = idLocation;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
+        setNbrLocation(getNbrLocation() + 1);
+    }
 
+
+
+    public static int getNbrLocation() {
+        return nbrLocation;
+    }
+    public static void setNbrLocation(int nbrLocation) {
+        Location.nbrLocation = nbrLocation;
     }
     public Date convertirDate(String date) {
         String pattern = "dd/MM/yyyy";

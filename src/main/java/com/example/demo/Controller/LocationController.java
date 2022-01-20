@@ -32,9 +32,7 @@ public class LocationController {
 
     @GetMapping("/locations/{idLocation}")
 	public Location getLocation(@PathVariable(value = "idLocation") int idLocation){
-		if(idLocation==0) {
-            return locationRepository.findById(idLocation).get();
-        }
-        return null;
+		
+        return locationRepository.findById(idLocation).get();
 	}
 }
